@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { BiLogIn } from "react-icons/bi"
 import { NavLink } from "./NavLink";
 
@@ -13,10 +14,12 @@ export function Menu() {
                     <NavLink href="#">Pontos de Coleta</NavLink>
                 </nav>
             </div>
+            <Link href={"/register"}>
             <div className="flex items-center gap-1 font-bold text-xl cursor-pointer transition-all hover:brightness-50">
                 <h1>Cadastre sua empresa</h1>
                 <BiLogIn className="w-6 h-6" />
             </div>
+            </Link>
         </div>
     );
 }
