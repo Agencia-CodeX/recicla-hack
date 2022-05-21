@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryColumn } from "typeorm"
+import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm"
 import { v4 as uuidv4 } from "uuid"
 
 @Entity("cooperatives")
@@ -22,7 +22,7 @@ class Cooperative {
     logradouro: string;
 
     @Column()
-    numero: string;
+    numero_casa: string;
 
     @Column()
     telefone: string;
@@ -38,6 +38,9 @@ class Cooperative {
 
     @Column()
     bairro: string;
+
+    @CreateDateColumn()
+    created_at: Date;
 
     constructor () {
         if (!this.id_cooperative) {

@@ -1,5 +1,6 @@
 import { Router } from "express"
-import { CreateCooperativeController } from "../../../../modules/cooperative/useCases/createCooperative/CreateCooperativeController"
+import { CreateCooperativeController } from "../../../../modules/cooperative/useCases/createCooperatives/CreateCooperativeController"
+
 
 
 const coopRoutes = Router()
