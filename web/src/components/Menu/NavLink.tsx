@@ -34,7 +34,7 @@ export function NavLink({ href, children, shouldMathExactHref = false, }: NavLin
 
     if (isActive) {
         return (
-            <a href={href} className="font-bold relative h-10 leading-10 cursor-pointer transition-all hover:brightness-50 after:h-1 after:bg-green-400 after:w-full after:absolute after:left-0 after:bottom-0">
+            <a href={href} className="font-bold relative h-10 leading-10 cursor-pointer transition-all hover:brightness-50 after:h-[2px] after:bg-green-400 after:w-full after:absolute after:left-0 after:bottom-0">
                 {children}
             </a >
         )
