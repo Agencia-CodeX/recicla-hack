@@ -11,14 +11,14 @@ export function Menu() {
                 <nav className="flex justify-start gap-12 text-2xl">
                     <NavLink href="/">Home</NavLink>
                     <NavLink href="/posts">Posts</NavLink>
-                    <NavLink href="#">Pontos de Coleta</NavLink>
+                    <NavLink href="/cooperativas">Pontos de Coleta</NavLink>
                 </nav>
             </div>
             <Link href={"/register"}>
-            <div className="flex items-center gap-1 font-bold text-xl cursor-pointer transition-all hover:brightness-50">
-                <h1>Cadastre sua empresa</h1>
-                <BiLogIn className="w-6 h-6" />
-            </div>
+                <div className="flex items-center gap-1 font-bold text-xl cursor-pointer transition-all hover:brightness-50">
+                    <h1>Cadastre sua empresa</h1>
+                    <BiLogIn className="w-6 h-6" />
+                </div>
             </Link>
         </div>
     );
