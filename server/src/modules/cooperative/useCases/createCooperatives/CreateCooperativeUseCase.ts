@@ -1,6 +1,6 @@
 import { inject, injectable } from "tsyringe";
 import { AppError } from "../../../../shared/errors/App.Error";
-import { ICoopRepository } from "../../repositories/ICoopRepository";
+import { ICoopRepository } from "../../repository/ICoopRepository";
 import { hash } from "bcryptjs"
 interface IRequest {
     email: string;
@@ -8,7 +8,7 @@ interface IRequest {
     razao_social: string;
     cep: string;
     logradouro: string;
-    numero: string;
+    numero_casa: string;
     telefone: string;
     responsavel: string;
     cidade: string; 
@@ -29,7 +29,7 @@ class CreateCooperativeUseCase {
         cidade,
         email, 
         logradouro,
-        numero,
+        numero_casa,
         password,
         razao_social,
         responsavel,
@@ -48,7 +48,7 @@ class CreateCooperativeUseCase {
             cidade,
             email, 
             logradouro,
-            numero,
+            numero_casa,
             password: passwordHash,
             razao_social,
             responsavel,
