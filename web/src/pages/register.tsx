@@ -22,8 +22,8 @@ export default function Register() {
                             focus:ring-4 focus:ring-[#60F089]"
                             type="text"
                             placeholder="CNPJ"
-                            onChange= {event => setCnpj(event.target.value)}
-                            value= {cpnj}
+                            onChange={event => setCnpj(event.target.value)}
+                            value={cpnj}
                         />
                     </div>
                     <div className="flex-1 min-w-[320px]">
@@ -167,38 +167,38 @@ export default function Register() {
                             </li>
                             <li className="flex flex-col items-center">
                                 <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
-                                    <Image width={25} height={25} src={"/images/plastico.svg"}>
+                                    <Image width={25} height={25} src={"/images/plastico.svg"} alt="icone representativo do platico">
                                     </Image>
                                 </button>
                                 <span className="mt-[6px]">Plástico</span>
                             </li>
                             <li className="flex flex-col items-center">
                                 <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
-                                    <Image width={25} height={25} src={"/images/metal.svg"}></Image>
+                                    <Image width={25} height={25} src={"/images/metal.svg"} alt="icone representativo do metal"></Image>
                                 </button>
                                 <span className="mt-[6px]">Ferro</span>
                             </li>
                             <li className="flex flex-col items-center">
                                 <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
-                                    <Image width={25} height={25} src={"/images/vidro.svg"}></Image>
+                                    <Image width={25} height={25} src={"/images/vidro.svg"} alt="icone representativo do vidro"></Image>
                                 </button>
                                 <span className="mt-[6px]">Vidro</span>
                             </li>
                             <li className="flex flex-col items-center">
                                 <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
-                                    <Image width={25} height={25} src={"/images/baterias.svg"}></Image>
+                                    <Image width={25} height={25} src={"/images/baterias.svg"} alt="icone representativo do baterias"></Image>
                                 </button>
                                 <span className="mt-[6px]">Papelão</span>
                             </li>
                         </ul>
                     </div>
-                    <button 
+                    <button
                         className="w-[208px] h-[34px] bg-green-50 rounded-lg border-2 border-black text-black "
                     >
                         Carregar logo
                     </button>
                 </div>
-                <button 
+                <button
                     className="w-[197] h-[40] rounded-lg bg-green-50 border-2 border-black"
                     type="submit"
                 >
