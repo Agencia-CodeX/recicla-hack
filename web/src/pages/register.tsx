@@ -1,4 +1,13 @@
+import Image from "next/image";
+import { FormEvent, useState } from "react";
+
 export default function Register() {
+    const [cpnj, setCnpj] = useState("");
+
+    function handleCreateCooperative(event: FormEvent) {
+        event.preventDefault();
+    }
+
     return (
         <div className="w-[90%] mx-[5%] my-[57px] py-10 flex items-center bg-[#005E2C] flex-col rounded-2xl">
             <h1 className="text-4xl py-5 font-bold">
@@ -9,17 +18,22 @@ export default function Register() {
                     <div className="flex-1 min-w-[320px]">
                         <h3 className="text-[16px] font-bold">Insira o CNPJ da sua emrpesa</h3>
                         <input
-                            className="w-full h-[34px] flex-wrap rounded-lg px-5 py-5 my-[10px] text-black"
+                            className="w-full h-[34px] flex-wrap rounded-lg px-5 py-5 my-[10px] text-black focus:outline-none
+                            focus:ring-4 focus:ring-[#60F089]"
                             type="text"
                             placeholder="CNPJ"
+                            onChange= {event => setCnpj(event.target.value)}
+                            value= {cpnj}
                         />
                     </div>
                     <div className="flex-1 min-w-[320px]">
-                        <h3 className="text-[16px] font-bold">Insira a razão social</h3>
+                        <label htmlFor="rs" className="text-[16px] font-bold">Insira a razão social</label>
                         <input
-                            className="w-full h-[34px] rounded-lg px-5 py-5 my-[10px]"
+                            id="rs"
+                            className="w-full h-[34px] rounded-lg px-5 py-5 my-[10px] text-black focus:outline-none
+                            focus:ring-4 focus:ring-[#60F089]"
                             type="text"
-                            placeholder="Nome"
+                            placeholder="Razão social"
                         />
                     </div>
                 </div>
@@ -29,7 +43,8 @@ export default function Register() {
                             CEP
                         </h3>
                         <input
-                            className="w-full h-[34px] rounded-lg px-5 my-[10px]"
+                            className="w-full  h-[34px] rounded-lg px-5 my-[10px] text-black focus:outline-none
+                            focus:ring-4 focus:ring-[#60F089]"
                             type="number"
                             placeholder="CEP"
                         />
@@ -39,7 +54,8 @@ export default function Register() {
                             Lograduro
                         </h3>
                         <input
-                            className="w-full h-[34px] px-5 rounded-lg my-[10px]"
+                            className="w-full h-[34px] px-5 rounded-lg my-[10px] text-black focus:outline-none
+                            focus:ring-4 focus:ring-[#60F089]"
                             type="text"
                             placeholder="Logradouro"
                         />
@@ -49,7 +65,8 @@ export default function Register() {
                             Número
                         </h3>
                         <input
-                            className="w-full h-[34px] rounded-lg px-5 my-[10px]"
+                            className="w-full h-[34px] rounded-lg px-5 my-[10px] text-black focus:outline-none
+                            focus:ring-4 focus:ring-[#60F089]"
                             type="number"
                             placeholder="Número"
                         />
@@ -61,7 +78,8 @@ export default function Register() {
                             Insira a UF
                         </h3>
                         <input
-                            className="w-full h-[34px] px-5 rounded-lg"
+                            className="w-full h-[34px] px-5 rounded-lg text-black focus:outline-none
+                            focus:ring-4 focus:ring-[#60F089]"
                             type="text"
                             placeholder="UF"
                         />
@@ -71,7 +89,8 @@ export default function Register() {
                             Insira a cidade
                         </h3>
                         <input
-                            className="w-full h-[34px] rounded-lg px-5"
+                            className="w-full h-[34px] rounded-lg px-5 text-black focus:outline-none
+                            focus:ring-4 focus:ring-[#60F089]"
                             type="text"
                             placeholder="Cidade"
                         />
@@ -81,7 +100,8 @@ export default function Register() {
                             Insira o bairro
                         </h3>
                         <input
-                            className="w-full h-[34px] rounded-lg px-5"
+                            className="w-full h-[34px] rounded-lg px-5 text-black focus:outline-none
+                            focus:ring-4 focus:ring-[#60F089]"
                             type="text"
                             placeholder="Bairro"
                         />
@@ -93,7 +113,8 @@ export default function Register() {
                             Responsavel
                         </h3>
                         <input
-                            className="w-full h-[34px] rounded-lg px-5"
+                            className="w-full h-[34px] rounded-lg px-5 text-black focus:outline-none
+                            focus:ring-4 focus:ring-[#60F089]"
                             type="text"
                             placeholder="Responsável"
                         />
@@ -103,7 +124,8 @@ export default function Register() {
                             Telefone responsável
                         </h3>
                         <input
-                            className="w-full h-[34px] rounded-lg px-5"
+                            className="w-full h-[34px] rounded-lg px-5 text-black focus:outline-none
+                            focus:ring-4 focus:ring-[#60F089]"
                             type="text"
                             placeholder="Telefone responsável"
                         />
@@ -115,7 +137,8 @@ export default function Register() {
                             Email
                         </h3>
                         <input
-                            className="w-full h-[34px] rounded-lg px-5"
+                            className="w-full h-[34px] rounded-lg px-5 text-black focus:outline-none
+                            focus:ring-4 focus:ring-[#60F089]"
                             type="text"
                             placeholder="E-mail"
                         />
@@ -125,20 +148,62 @@ export default function Register() {
                             Senha
                         </h3>
                         <input
-                            className="w-full h-[34px] rounded-lg px-5"
+                            className="w-full h-[34px] rounded-lg px-5 text-black focus:outline-none
+                            focus:ring-4 focus:ring-[#60F089]"
                             type="text"
                             placeholder="Senha"
                         />
                     </div>
                 </div>
-                {/* <div className="flex-1 min-w-[320px]">
-                    <h3 className="text-[16px] font-bold">
-                        Materiais
-                    </h3>
-                    <ul>
-                        <li><img src="" alt="" /></li>
-                    </ul>
-                </div> */}
+                <div className="flex justify-between items-center">
+                    <div>
+                        <h3>Materais</h3>
+                        <ul className="flex items-center gap-[40px]">
+                            <li className="flex flex-col items-center">
+                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full">
+                                    <Image width={25} height={25} src={"/images/papel.svg"} alt="icone representativo do papel"></Image>
+                                </button>
+                                <span className="mt-[6px]">Papel</span>
+                            </li>
+                            <li className="flex flex-col items-center">
+                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                    <Image width={25} height={25} src={"/images/plastico.svg"}>
+                                    </Image>
+                                </button>
+                                <span className="mt-[6px]">Plástico</span>
+                            </li>
+                            <li className="flex flex-col items-center">
+                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                    <Image width={25} height={25} src={"/images/metal.svg"}></Image>
+                                </button>
+                                <span className="mt-[6px]">Ferro</span>
+                            </li>
+                            <li className="flex flex-col items-center">
+                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                    <Image width={25} height={25} src={"/images/vidro.svg"}></Image>
+                                </button>
+                                <span className="mt-[6px]">Vidro</span>
+                            </li>
+                            <li className="flex flex-col items-center">
+                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                    <Image width={25} height={25} src={"/images/baterias.svg"}></Image>
+                                </button>
+                                <span className="mt-[6px]">Papelão</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button 
+                        className="w-[208px] h-[34px] bg-green-50 rounded-lg border-2 border-black text-black "
+                    >
+                        Carregar logo
+                    </button>
+                </div>
+                <button 
+                    className="w-[197] h-[40] rounded-lg bg-green-50 border-2 border-black"
+                    type="submit"
+                >
+                    Cadastrar
+                </button>
             </form>
         </div>
     )
