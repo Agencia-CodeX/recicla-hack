@@ -1,13 +1,13 @@
-import express from "express";
-
 import "reflect-metadata"
+
+import express from "express";
 
 const app = express();
 
 app.use(express.json())
 
-app.get("/", (req, res) => {
-    res.json({ message: "Hello!" })
+app.get("/", (request, response) => {
+    response.json({ message: "Hello!" })
 })
 
 app.listen(3333, () => console.log("Server is running!"));
