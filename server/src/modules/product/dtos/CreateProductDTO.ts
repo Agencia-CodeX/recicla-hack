@@ -1,0 +1,6 @@
+interface ICreteProductDTO {
+
+    
+}
+
+export { ICreteProductDTO }
