@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { container } from "tsyringe";
+import { CreateCoopProductUseCase } from "../../../coopProducts/useCases/createCoopProduct/CreateCoopProductUseCase";
 import { CreateCooperativeUseCase } from "./CreateCooperativeUseCase";
 
 class CreateCooperativeController {
@@ -15,10 +16,12 @@ class CreateCooperativeController {
         razao_social,
         responsavel,
         telefone,
-        uf 
+        uf,
+        coopProducts
         } = request.body
 
         const createCooperativeUseCase = container.resolve(CreateCooperativeUseCase);
+        const createCoopProductUseCase = container.resolve(CreateCoopProductUseCase);
 
         const coop = await createCooperativeUseCase.execute({
             bairro,
@@ -34,6 +37,10 @@ class CreateCooperativeController {
             uf 
         })
 
+        await createCoopProductUseCase.execute({
+            coopProducts,
+            fk_coop_id_coop: coop.id_cooperative
+        })
         return response.json(coop)
     }
 }

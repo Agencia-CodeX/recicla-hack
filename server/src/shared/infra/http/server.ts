@@ -6,7 +6,7 @@ import express, { NextFunction, Request, Response } from "express";
 
 import { AppError } from "../../errors/App.Error";
 import { router } from "./routes/index";
-import createConnection from "./typeorm";
+import createConnection from "../typeorm";
 
 import "../../container";
 
