@@ -96,12 +96,39 @@ export default function Register() {
                             <h3 className="text-[16px] font-bold">
                                 Insira a UF
                             </h3>
-                            <input
-                                className="w-full h-[34px] px-5 rounded-lg text-black focus:outline-none
-                            focus:ring-4 focus:ring-[#60F089]"
-                                type="text"
-                                placeholder="UF"
-                            />
+                            {/* w-full h-[34px] px-5 rounded-lg text-black focus:outline-none
+                            focus:ring-4 focus:ring-[#60F089]" */}
+                            <select 
+                                className="w-full min-w[50px] h-[34px] px-5 rounded-lg text-black focus:outline-none focus:ring-4 focus:ring-[#60F089]"
+                                
+                            >
+                                <option value="AC">AC</option>
+                                <option value="AL">AL</option>
+                                <option value="AP">AP</option>
+                                <option value="AM">AM</option>
+                                <option value="BA">BA</option>
+                                <option value="CE">CE</option>
+                                <option value="DF">DF</option>
+                                <option value="ES">ES</option>
+                                <option value="GO">GO</option>
+                                <option value="MA">MA</option>
+                                <option value="MT">MT</option>
+                                <option value="MS">MS</option>
+                                <option value="MG">MG</option>
+                                <option value="PA">PA</option>
+                                <option value="PB">PB</option>
+                                <option value="PE">PE</option>
+                                <option value="PI">PI</option>
+                                <option value="RJ">RJ</option>
+                                <option value="RN">RN</option>
+                                <option value="RS">RS</option>
+                                <option value="RO">RO</option>
+                                <option value="RR">RR</option>
+                                <option value="SC">SC</option>
+                                <option value="SP">SP</option>
+                                <option value="SE">SE</option>
+                                <option value="TO">TO</option>
+                            </select>
                         </div>
                         <div className="flex-1 min-w-[270px]">
                             <h3 className="text[16px] font-bold">
@@ -180,7 +207,7 @@ export default function Register() {
                             <ul className="flex items-center gap-[40px] flex-wrap">
                                 <li className="flex flex-col items-center">
                                     <button
-                                        className={papelButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                                        className={papelButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none focus:ring-4 focus:ring-[#60F089]"}
                                         onClick={() => setPapelButton(!papelButton)}
                                         type="button"
                                     >
@@ -191,7 +218,7 @@ export default function Register() {
                                 <li className="flex flex-col items-center">
 
                                     <button
-                                        className={plasticoButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                                        className={plasticoButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none focus:ring-4 focus:ring-[#60F089]"}
                                         onClick={() => setPlasticoButton(!plasticoButton)}
                                         type="button"
                                     >
@@ -204,7 +231,7 @@ export default function Register() {
                                 <li className="flex flex-col items-center">
 
                                     <button
-                                        className={metalButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                                        className={metalButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none focus:ring-4 focus:ring-[#60F089]"}
                                         onClick={() => setMetalButton(!metalButton)}
                                         type="button"
                                     >
@@ -216,7 +243,7 @@ export default function Register() {
                                 <li className="flex flex-col items-center">
 
                                     <button
-                                        className={vidroButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                                        className={vidroButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none focus:ring-4 focus:ring-[#60F089]"}
                                         onClick={() => setVidroButton(!vidroButton)}
                                         type="button"
                                     >
@@ -228,7 +255,7 @@ export default function Register() {
                                 <li className="flex flex-col items-center">
 
                                     <button
-                                        className={bateriaButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                                        className={bateriaButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none focus:ring-4 focus:ring-[#60F089]"}
                                         onClick={() => setBateriaButton(!bateriaButton)}
                                         type="button"
                                     >
@@ -240,7 +267,7 @@ export default function Register() {
                                 <li className="flex flex-col items-center">
 
                                     <button
-                                        className={papelaoButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                                        className={papelaoButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none focus:ring-4 focus:ring-[#60F089]"}
                                         onClick={() => setPapelaoButton(!papelaoButton)}
                                         type="button"
                                     >

@@ -50,8 +50,20 @@ class CoopRepository implements ICoopRepository {
         return coop;
     }
 
-    listCoop(uf: string, municipio: string): Promise<Cooperative> {
-        throw new Error("Method not implemented.");
+    async listCoop(uf?: string, cidade?: string): Promise<Cooperative[]> {
+        const coopQuery = await this.repository
+            .createQueryBuilder("c")
+            if (uf) {
+                coopQuery.andWhere("uf = :uf", { uf })
+            }
+
+            if (cidade) {
+                coopQuery.andWhere("cidade = :cidade", { cidade })
+            }
+
+            const coops = await coopQuery.getMany()
+
+            return coops
     }
 
 }
