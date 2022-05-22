@@ -6,10 +6,10 @@ import { Menu } from "../components/Menu";
 export default function Home() {
     return (
         <>
-            <Menu/>
+            <Menu />
             <div className="flex justify-between px-20 mt-10 items-center min-h-[500px] w-full ">
-                <div className="flex items-center justify-between w-full xs:flex-col xs:gap-6">
-                    <div className="flex flex-col xs:items-center">
+                <div className="flex items-center justify-between w-full flex-col gap-6 md:flex-row md:gap-0">
+                    <div className="flex flex-col sm:items-center">
                         <h1 className="text-4xl text-green-400 font-bold xs:text-center">Encontre os pontos de coleta <br /> mais próximos de você.</h1>
                         <Link href={'/cooperativas'}>
                             <button className="flex bg-green-50 w-[384px] h-[72px] items-center rounded-full mt-[61px] relative transition-all  hover:brightness-75">
