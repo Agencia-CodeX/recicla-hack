@@ -128,7 +128,7 @@ export function Filter() {
                 <div className="flex flex-wrap w-full gap-4 justify-center lg:justify-between">
                     <Link href={"/cooperativas/123123-asdsd-231"}>
                         <a className="flex-1">
-                            <div className="2xl:min-w-[400px] flex flex-col items-center bg-zinc-800 rounded-xl gap-2 pb-6 mb-8">
+                            <div className="min-w-[350px] flex flex-col items-center bg-zinc-800 rounded-xl gap-2 pb-6 mb-8">
                                 <div className="flex flex-col gap-1">
                                     <img src="images/logo.svg" alt="Logo Cooperativa" className="w-full h-[200px]" />
                                     <h1 className="text-2xl font-bold text-center">Recicla Tudo</h1>
@@ -168,7 +168,7 @@ export function Filter() {
 
                     <Link href={"/cooperativas/123123-asdsd-231"}>
                         <a className="flex-1">
-                            <div className="2xl:min-w-[400px] flex flex-col items-center bg-zinc-800 rounded-xl gap-2 pb-6 mb-8">
+                            <div className="min-w-[350px] flex flex-col items-center bg-zinc-800 rounded-xl gap-2 pb-6 mb-8">
                                 <div className="flex flex-col gap-1">
                                     <img src="images/trash-image.png" alt="Logo Cooperativa" className="w-full h-[200px]" />
                                     <h1 className="text-2xl font-bold text-center">Recicla Tudo</h1>
@@ -229,7 +229,7 @@ export function Filter() {
 
                     <Link href={"/cooperativas/123123-asdsd-231"}>
                         <a className="flex-1 lg:max-w-[590px]">
-                            <div className="2xl:-w-[400px] max-w[600px] flex flex-col items-center bg-zinc-800 rounded-xl gap-2 pb-6 mb-8">
+                            <div className="min-w-[350px] max-w[600px] flex flex-col items-center bg-zinc-800 rounded-xl gap-2 pb-6 mb-8">
                                 <div className="flex flex-col gap-1">
                                     <img src="images/trash-image.png" alt="Logo Cooperativa" className="w-full h-[200px]" />
                                     <h1 className="text-2xl font-bold text-center">Recicla Tudo</h1>
