@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <>
             <Menu />
-            <div className="flex justify-between px-20 mt-10 items-center min-h-[500px] w-full ">
+            <div className="flex mt-20  justify-between px-20 md:mt-10 items-center min-h-[700px] w-full ">
                 <div className="flex items-center justify-between w-full flex-col gap-6 md:flex-row md:gap-0">
                     <div className="flex flex-col sm:items-center">
                         <h1 className="text-4xl text-green-400 font-bold xs:text-center">Encontre os pontos de coleta <br /> mais próximos de você.</h1>
