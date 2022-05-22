@@ -1,11 +1,12 @@
 import { AiOutlineSearch } from "react-icons/ai"
+import { Menu } from "../components/Menu";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu } from "../components/Menu";
+
 
 export default function Home() {
     return (
-        <>
+        <>  
             <Menu />
             <div className="flex mt-20  justify-between px-20 md:mt-10 items-center min-h-[700px] w-full ">
                 <div className="flex items-center justify-between w-full flex-col gap-6 md:flex-row md:gap-0">
