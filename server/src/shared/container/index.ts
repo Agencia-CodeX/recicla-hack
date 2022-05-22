@@ -1,4 +1,6 @@
 import { container } from "tsyringe"
+import { UsersRepository } from "../../modules/account/infra/typeorm/repository/UsersRepository";
+import { IUsersRepository } from "../../modules/account/repository/IUsersRepository";
 import { CoopRepository } from "../../modules/cooperative/infra/typeorm/repository/CoopRepository";
 import { ICoopRepository } from "../../modules/cooperative/repository/ICoopRepository";
 import { CoopProductsRepository } from "../../modules/coopProducts/infra/typeorm/repository/CoopProductsRepository";
@@ -23,6 +25,10 @@ container.registerSingleton<IPostRepository>(
     PostRepository
 );
 
+container.registerSingleton<IUsersRepository>(
+    "UsersRepository",
+    UsersRepository
+);
 
 
 
