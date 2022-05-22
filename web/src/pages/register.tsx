@@ -13,7 +13,7 @@ export default function Register() {
             <h1 className="text-4xl py-5 font-bold">
                 Cadastre-se
             </h1>
-            <form className="px-20 flex flex-col w-full">
+            <form className="px-5 flex flex-col w-full  md:px-20">
                 <div className="flex gap-5 flex-wrap w-full">
                     <div className="flex-1 min-w-[320px]">
                         <h3 className="text-[16px] font-bold">Insira o CNPJ da sua emrpesa</h3>
@@ -22,8 +22,8 @@ export default function Register() {
                             focus:ring-4 focus:ring-[#60F089]"
                             type="text"
                             placeholder="CNPJ"
-                            onChange= {event => setCnpj(event.target.value)}
-                            value= {cpnj}
+                            onChange={event => setCnpj(event.target.value)}
+                            value={cpnj}
                         />
                     </div>
                     <div className="flex-1 min-w-[320px]">
@@ -155,55 +155,75 @@ export default function Register() {
                         />
                     </div>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center sm:flex-col md:flex-row">
                     <div>
                         <h3>Materais</h3>
-                        <ul className="flex items-center gap-[40px]">
+                        <ul className="flex items-center gap-[40px] flex-wrap">
                             <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full">
+                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full focus:outline-none
+                                focus:ring-4 focus:ring-[#60F089]"
+                                type="button"
+                                >
                                     <Image width={25} height={25} src={"/images/papel.svg"} alt="icone representativo do papel"></Image>
                                 </button>
                                 <span className="mt-[6px]">Papel</span>
                             </li>
                             <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none
+                                focus:ring-4 focus:ring-[#60F089]" 
+                                type="button"
+                                >
                                     <Image width={25} height={25} src={"/images/plastico.svg"}>
                                     </Image>
                                 </button>
                                 <span className="mt-[6px]">Plástico</span>
                             </li>
                             <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none
+                                focus:ring-4 focus:ring-[#60F089]"
+                                type="button"
+                                >
                                     <Image width={25} height={25} src={"/images/metal.svg"}></Image>
                                 </button>
                                 <span className="mt-[6px]">Ferro</span>
                             </li>
                             <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none
+                                focus:ring-4 focus:ring-[#60F089]"
+                                type="button"
+                                >
                                     <Image width={25} height={25} src={"/images/vidro.svg"}></Image>
                                 </button>
                                 <span className="mt-[6px]">Vidro</span>
                             </li>
                             <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none
+                                focus:ring-4 focus:ring-[#60F089]" 
+                                type="button"
+                                >
                                     <Image width={25} height={25} src={"/images/baterias.svg"}></Image>
                                 </button>
                                 <span className="mt-[6px]">Papelão</span>
                             </li>
                         </ul>
                     </div>
-                    <button 
-                        className="w-[208px] h-[34px] bg-green-50 rounded-lg border-2 border-black text-black "
+                    <button
+                        className="mr-2 w-[300px] h-[60px] bg-green-50 rounded-lg border-2 border-black text-black focus:outline-none
+                        focus:ring-4 focus:ring-[#60F089] sm:w-2[] md:w-[250px] md:h-[34px] sm:mt-10"
+                        type="button" 
                     >
                         Carregar logo
                     </button>
                 </div>
-                <button 
-                    className="w-[197] h-[40] rounded-lg bg-green-50 border-2 border-black"
-                    type="submit"
-                >
-                    Cadastrar
-                </button>
+                <div className="flex w-full justify-center mt-10">
+                    <button
+                        className="w-[200px] h-[60px] rounded-lg bg-green-50 border-2 border-black text-black focus:outline-none
+                        focus:ring-4 focus:ring-[#60F089]"
+                        type="submit"
+                    >
+                        Cadastrar
+                    </button>
+                </div>
             </form>
         </div>
     )
