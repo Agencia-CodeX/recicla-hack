@@ -1,9 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
+import { useState } from "react";
 
 import { IoFilterOutline } from "react-icons/io5"
 
 export function Filter() {
+    const [papelButton, setPapelButton] = useState(false);
+    const [plasticoButton, setPlasticoButton] = useState(false);
+    const [metalButton, setMetalButton] = useState(false);
+    const [vidroButton, setVidroButton] = useState(false);
+    const [bateriaButton, setBateriaButton] = useState(false);
+    const [papelaoButton, setPapelaoButton] = useState(false);
+
     return (
         <>
             <div className="flex w-[90%] mx-[5%] mt-8 h-24 bg-green-900 bg-opacity-80 rounded-lg justify-between items-center gap-6 px-6">
@@ -42,38 +50,63 @@ export function Filter() {
 
                 <ul className="flex items-center gap-6">
                     <li className="flex flex-col items-center">
-                        <button className="w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full">
+                        <button
+                            className={papelButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                            onClick={() => setPapelButton(!papelButton)}
+                        >
                             <Image width={25} height={25} src={"/images/papel.svg"} alt="icone representativo do papel"></Image>
                         </button>
                         <span className="mt-1">Papel</span>
                     </li>
 
                     <li className="flex flex-col items-center">
-                        <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                        <button
+                            className={plasticoButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                            onClick={() => setPlasticoButton(!plasticoButton)}
+                        >
                             <Image width={25} height={25} src={"/images/plastico.svg"} alt="icone representativo do platico"></Image>
                         </button>
                         <span className="mt-1">Plástico</span>
                     </li>
 
                     <li className="flex flex-col items-center">
-                        <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                        <button
+                            className={metalButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                            onClick={() => setMetalButton(!metalButton)}
+                        >
                             <Image width={25} height={25} src={"/images/metal.svg"} alt="icone representativo do metal"></Image>
                         </button>
-                        <span className="mt-1">Ferro</span>
+                        <span className="mt-1">Metal</span>
                     </li>
 
                     <li className="flex flex-col items-center">
-                        <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                        <button
+                            className={vidroButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                            onClick={() => setVidroButton(!vidroButton)}
+                        >
                             <Image width={25} height={25} src={"/images/vidro.svg"} alt="icone representativo do vidro"></Image>
                         </button>
                         <span className="mt-1">Vidro</span>
                     </li>
 
                     <li className="flex flex-col items-center">
-                        <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
-                            <Image width={25} height={25} src={"/images/baterias.svg"} alt="icone representativo do baterias"></Image>
+                        <button
+                            className={bateriaButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                            onClick={() => setBateriaButton(!bateriaButton)}
+                        >
+                            <Image width={25} height={25} src={"/images/bateria.svg"} alt="icone representativo do bateria"></Image>
                         </button>
-                        <span className="mt-1">Papelão</span>
+                        <span className="mt-1 text-xs">Bateria</span>
+                    </li>
+
+                    <li className="flex flex-col items-center">
+                        <button
+                            className={papelaoButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                            onClick={() => setPapelaoButton(!papelaoButton)}
+                        >
+                            <Image width={25} height={25} src={"/images/papelao.svg"} alt="icone representativo do papelão"></Image>
+                        </button>
+                        <span className="mt-1 text-xs">Papelão</span>
                     </li>
                 </ul>
 
@@ -117,7 +150,7 @@ export function Filter() {
                                 <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
                                     <Image width={25} height={25} src={"/images/metal.svg"} alt="icone representativo do metal"></Image>
                                 </button>
-                                <span className="mt-1 text-xs">Ferro</span>
+                                <span className="mt-1 text-xs">Metal</span>
                             </li>
                         </ul>
 
@@ -153,7 +186,7 @@ export function Filter() {
                                 <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
                                     <Image width={25} height={25} src={"/images/metal.svg"} alt="icone representativo do metal"></Image>
                                 </button>
-                                <span className="mt-1 text-xs">Ferro</span>
+                                <span className="mt-1 text-xs">Metal</span>
                             </li>
 
                             <li className="flex flex-col items-center">
@@ -164,8 +197,15 @@ export function Filter() {
                             </li>
 
                             <li className="flex flex-col items-center">
+                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none focus:ring-4 focus:ring-[#60F089]" type="button">
+                                    <Image width={25} height={25} src={"/images/bateria.svg"} alt="icone representativo do bateria"></Image>
+                                </button>
+                                <span className="mt-1 text-xs">Bateria</span>
+                            </li>
+
+                            <li className="flex flex-col items-center">
                                 <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
-                                    <Image width={25} height={25} src={"/images/baterias.svg"} alt="icone representativo do baterias"></Image>
+                                    <Image width={25} height={25} src={"/images/papelao.svg"} alt="icone representativo do bateria"></Image>
                                 </button>
                                 <span className="mt-1 text-xs">Papelão</span>
                             </li>
@@ -203,7 +243,7 @@ export function Filter() {
                                 <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
                                     <Image width={25} height={25} src={"/images/metal.svg"} alt="icone representativo do metal"></Image>
                                 </button>
-                                <span className="mt-1 text-xs">Ferro</span>
+                                <span className="mt-1 text-xs">Metal</span>
                             </li>
                         </ul>
 

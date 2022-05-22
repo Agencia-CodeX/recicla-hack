@@ -4,6 +4,13 @@ import { FormEvent, useState } from "react";
 export default function Register() {
     const [cpnj, setCnpj] = useState("");
 
+    const [papelButton, setPapelButton] = useState(false);
+    const [plasticoButton, setPlasticoButton] = useState(false);
+    const [metalButton, setMetalButton] = useState(false);
+    const [vidroButton, setVidroButton] = useState(false);
+    const [bateriaButton, setBateriaButton] = useState(false);
+    const [papelaoButton, setPapelaoButton] = useState(false);
+
     function handleCreateCooperative(event: FormEvent) {
         event.preventDefault();
     }
@@ -160,8 +167,9 @@ export default function Register() {
                         <h3>Materais</h3>
                         <ul className="flex items-center gap-[40px] flex-wrap">
                             <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full focus:outline-none
-                                focus:ring-4 focus:ring-[#60F089]"
+                                <button
+                                    className={papelButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                                    onClick={() => setPapelButton(!papelButton)}
                                     type="button"
                                 >
                                     <Image width={25} height={25} src={"/images/papel.svg"} alt="icone representativo do papel"></Image>
@@ -170,11 +178,12 @@ export default function Register() {
                             </li>
                             <li className="flex flex-col items-center">
 
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none
-                                focus:ring-4 focus:ring-[#60F089]"
+                                <button
+                                    className={plasticoButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                                    onClick={() => setPlasticoButton(!plasticoButton)}
                                     type="button"
                                 >
-                                    <Image width={25} height={25} src={"/images/plastico.svg"}>
+                                    <Image width={25} height={25} src={"/images/plastico.svg"} alt="icone representativo do plastico">
 
                                     </Image>
                                 </button>
@@ -182,33 +191,48 @@ export default function Register() {
                             </li>
                             <li className="flex flex-col items-center">
 
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none
-                                focus:ring-4 focus:ring-[#60F089]"
+                                <button
+                                    className={metalButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                                    onClick={() => setMetalButton(!metalButton)}
                                     type="button"
                                 >
-                                    <Image width={25} height={25} src={"/images/metal.svg"}></Image>
+                                    <Image width={25} height={25} src={"/images/metal.svg"} alt="icone representativo do metal"></Image>
 
                                 </button>
-                                <span className="mt-[6px]">Ferro</span>
+                                <span className="mt-[6px]">Metal</span>
                             </li>
                             <li className="flex flex-col items-center">
 
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none
-                                focus:ring-4 focus:ring-[#60F089]"
+                                <button
+                                    className={vidroButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                                    onClick={() => setVidroButton(!vidroButton)}
                                     type="button"
                                 >
-                                    <Image width={25} height={25} src={"/images/vidro.svg"}></Image>
+                                    <Image width={25} height={25} src={"/images/vidro.svg"} alt="icone representativo do vidro"></Image>
 
                                 </button>
                                 <span className="mt-[6px]">Vidro</span>
                             </li>
                             <li className="flex flex-col items-center">
 
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none
-                                focus:ring-4 focus:ring-[#60F089]"
+                                <button
+                                    className={bateriaButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                                    onClick={() => setBateriaButton(!bateriaButton)}
                                     type="button"
                                 >
-                                    <Image width={25} height={25} src={"/images/baterias.svg"}></Image>
+                                    <Image width={25} height={25} src={"/images/bateria.svg"} alt="icone representativo do bateria"></Image>
+
+                                </button>
+                                <span className="mt-[6px]">Bateria</span>
+                            </li>
+                            <li className="flex flex-col items-center">
+
+                                <button
+                                    className={papelaoButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
+                                    onClick={() => setPapelaoButton(!papelaoButton)}
+                                    type="button"
+                                >
+                                    <Image width={25} height={25} src={"/images/papelao.svg"} alt="icone representativo do bateria"></Image>
 
                                 </button>
                                 <span className="mt-[6px]">Papelão</span>

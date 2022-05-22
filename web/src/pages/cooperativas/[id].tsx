@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import { Menu } from "../../components/Menu";
 
@@ -7,8 +8,8 @@ export default function CooperativePost() {
             <Head>
                 <title>Coperativa Postagens</title>
             </Head>
-            
-            <Menu/>
+
+            <Menu />
 
             <main className="bg-zinc-800 p-16 mt-[23px] rounded-md border-[3px] border-green-400 flex items-center flex-col">
                 <img className="mt-[34px]" src="/images/logo-coperativa.svg" alt="imagem do logo da coperativa" />
@@ -42,9 +43,19 @@ export default function CooperativePost() {
                         </li>
                         <li className="flex flex-col items-center">
                             <button className="w-[76px] h-[76px] flex items-center justify-center bg-white rounded-full">
-                                <img className="w-[44.5px] h-[42.35px]" src="/images/baterias.svg" alt="imagem representativa baterias" />
+                                <img className="w-[44.5px] h-[42.35px]" src="/images/bateria.svg" alt="imagem representativa bateria" />
                             </button>
-                            <span className="mt-[10px]">Baterias</span>
+                            <span className="mt-[10px]">Bateria</span>
+                        </li>
+                        <li className="flex flex-col items-center">
+                            <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none
+                                focus:ring-4 focus:ring-[#60F089]"
+                                type="button"
+                            >
+                                <img className="w-[44.5px] h-[42.35px]" src="/images/bateria.svg" alt="icone representativo do bateria" />
+
+                            </button>
+                            <span className="mt-[6px]">Bateria</span>
                         </li>
                         <li className="flex flex-col items-center">
                             <button className="w-[76px] h-[76px] flex items-center justify-center bg-white rounded-full">
