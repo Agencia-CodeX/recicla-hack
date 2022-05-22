@@ -12,14 +12,21 @@ export function Menu() {
                     <NavLink href="/">Home</NavLink>
                     <NavLink href="/posts">Posts</NavLink>
                     <NavLink href="/cooperativas">Pontos de Coleta</NavLink>
+                    <NavLink href="/cooperativas">Carteira</NavLink>
                 </nav>
             </div>
-            <Link href={"/register"}>
-                <div className="flex items-center gap-1 font-bold text-xl cursor-pointer transition-all hover:brightness-50">
-                    <h1>Cadastre sua empresa</h1>
-                    <BiLogIn className="w-6 h-6" />
+            <div className="flex items-center gap-8">
+                <div className="flex items-center gap-1">
+                    <img src="/images/coin.svg" alt="moedas do usuário" />
+                    <span className="text-lg font-medium">2000</span>
                 </div>
-            </Link>
+                <Link href={"/register"}>
+                    <div className="flex items-center gap-1 font-bold text-xl cursor-pointer transition-all hover:brightness-50 mr-5">
+                        <h1>Cadastrar empresa</h1>
+                        <BiLogIn className="w-6 h-6" />
+                    </div>
+                </Link>
+            </div>
         </div>
     );
 }

@@ -259,13 +259,15 @@ export default function Register() {
 
                     </div >
                     <div className="flex w-full justify-center mt-10">
-                        <button
-                            className="w-[200px] h-[60px] rounded-lg bg-green-50 border-2 border-black text-black focus:outline-none
+                        <Link href={"/cooperativas/asdasdas-dasd-ad-asda"}>
+                            <button
+                                className="w-[200px] h-[60px] rounded-lg bg-green-50 border-2 border-black text-black focus:outline-none
                         focus:ring-4 focus:ring-[#60F089]"
-                            type="submit"
-                        >
-                            Cadastrar
-                        </button>
+                            // type="submit"
+                            >
+                                Cadastrar
+                            </button>
+                        </Link>
                     </div>
                 </form >
             </div >
