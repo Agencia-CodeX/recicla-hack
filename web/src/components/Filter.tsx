@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 import { IoFilterOutline } from "react-icons/io5"
@@ -125,134 +126,146 @@ export function Filter() {
                 </div>
 
                 <div className="flex flex-wrap w-full gap-4 justify-between">
-                    <div className="flex flex-col items-center bg-zinc-800 w-[400px] rounded-xl gap-2 pb-6 mb-8">
-                        <div className="flex flex-col gap-1">
-                            <img src="images/logo.svg" alt="Logo Cooperativa" className="w-full h-[200px]" />
-                            <h1 className="text-2xl font-bold text-center">Recicla Tudo</h1>
-                        </div>
+                    <Link href={"/cooperativas/123123-asdsd-231"}>
+                        <a>
+                            <div className="flex flex-col items-center bg-zinc-800 w-[400px] rounded-xl gap-2 pb-6 mb-8">
+                                <div className="flex flex-col gap-1">
+                                    <img src="images/logo.svg" alt="Logo Cooperativa" className="w-full h-[200px]" />
+                                    <h1 className="text-2xl font-bold text-center">Recicla Tudo</h1>
+                                </div>
 
-                        <ul className="flex items-center gap-4">
-                            <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
-                                    <Image width={25} height={25} src={"/images/papel.svg"} alt="icone representativo do papel"></Image>
-                                </button>
-                                <span className="mt-1 text-xs">Papel</span>
-                            </li>
+                                <ul className="flex items-center gap-4">
+                                    <li className="flex flex-col items-center">
+                                        <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                            <Image width={25} height={25} src={"/images/papel.svg"} alt="icone representativo do papel"></Image>
+                                        </button>
+                                        <span className="mt-1 text-xs">Papel</span>
+                                    </li>
 
-                            <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
-                                    <Image width={25} height={25} src={"/images/plastico.svg"} alt="icone representativo do platico"></Image>
-                                </button>
-                                <span className="mt-1 text-xs">Plástico</span>
-                            </li>
+                                    <li className="flex flex-col items-center">
+                                        <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                            <Image width={25} height={25} src={"/images/plastico.svg"} alt="icone representativo do platico"></Image>
+                                        </button>
+                                        <span className="mt-1 text-xs">Plástico</span>
+                                    </li>
 
-                            <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
-                                    <Image width={25} height={25} src={"/images/metal.svg"} alt="icone representativo do metal"></Image>
-                                </button>
-                                <span className="mt-1 text-xs">Metal</span>
-                            </li>
-                        </ul>
+                                    <li className="flex flex-col items-center">
+                                        <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                            <Image width={25} height={25} src={"/images/metal.svg"} alt="icone representativo do metal"></Image>
+                                        </button>
+                                        <span className="mt-1 text-xs">Metal</span>
+                                    </li>
+                                </ul>
 
-                        <div className="flex flex-col justify-start">
-                            <p>Rio de Janeiro - Volta Redonda</p>
-                            <p>Vila Rica, Trezentos e Quinze</p>
-                            <p>Nº 89</p>
-                        </div>
-                    </div>
+                                <div className="flex flex-col justify-start">
+                                    <p>Rio de Janeiro - Volta Redonda</p>
+                                    <p>Vila Rica, Trezentos e Quinze</p>
+                                    <p>Nº 89</p>
+                                </div>
+                            </div>
+                        </a>
+                    </Link>
 
-                    <div className="flex flex-col items-center bg-zinc-800 w-[400px] rounded-xl gap-2 pb-6 mb-8">
-                        <div className="flex flex-col gap-1">
-                            <img src="images/trash-image.png" alt="Logo Cooperativa" className="w-full h-[200px]" />
-                            <h1 className="text-2xl font-bold text-center">Recicla Tudo</h1>
-                        </div>
+                    <Link href={"/cooperativas/123123-asdsd-231"}>
+                        <a>
+                            <div className="flex flex-col items-center bg-zinc-800 w-[400px] rounded-xl gap-2 pb-6 mb-8">
+                                <div className="flex flex-col gap-1">
+                                    <img src="images/trash-image.png" alt="Logo Cooperativa" className="w-full h-[200px]" />
+                                    <h1 className="text-2xl font-bold text-center">Recicla Tudo</h1>
+                                </div>
 
-                        <ul className="flex items-center gap-4">
-                            <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
-                                    <Image width={25} height={25} src={"/images/papel.svg"} alt="icone representativo do papel"></Image>
-                                </button>
-                                <span className="mt-1 text-xs">Papel</span>
-                            </li>
+                                <ul className="flex items-center gap-4">
+                                    <li className="flex flex-col items-center">
+                                        <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                            <Image width={25} height={25} src={"/images/papel.svg"} alt="icone representativo do papel"></Image>
+                                        </button>
+                                        <span className="mt-1 text-xs">Papel</span>
+                                    </li>
 
-                            <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
-                                    <Image width={25} height={25} src={"/images/plastico.svg"} alt="icone representativo do platico"></Image>
-                                </button>
-                                <span className="mt-1 text-xs">Plástico</span>
-                            </li>
+                                    <li className="flex flex-col items-center">
+                                        <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                            <Image width={25} height={25} src={"/images/plastico.svg"} alt="icone representativo do platico"></Image>
+                                        </button>
+                                        <span className="mt-1 text-xs">Plástico</span>
+                                    </li>
 
-                            <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
-                                    <Image width={25} height={25} src={"/images/metal.svg"} alt="icone representativo do metal"></Image>
-                                </button>
-                                <span className="mt-1 text-xs">Metal</span>
-                            </li>
+                                    <li className="flex flex-col items-center">
+                                        <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                            <Image width={25} height={25} src={"/images/metal.svg"} alt="icone representativo do metal"></Image>
+                                        </button>
+                                        <span className="mt-1 text-xs">Metal</span>
+                                    </li>
 
-                            <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
-                                    <Image width={25} height={25} src={"/images/vidro.svg"} alt="icone representativo do vidro"></Image>
-                                </button>
-                                <span className="mt-1 text-xs">Vidro</span>
-                            </li>
+                                    <li className="flex flex-col items-center">
+                                        <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                            <Image width={25} height={25} src={"/images/vidro.svg"} alt="icone representativo do vidro"></Image>
+                                        </button>
+                                        <span className="mt-1 text-xs">Vidro</span>
+                                    </li>
 
-                            <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none focus:ring-4 focus:ring-[#60F089]" type="button">
-                                    <Image width={25} height={25} src={"/images/bateria.svg"} alt="icone representativo do bateria"></Image>
-                                </button>
-                                <span className="mt-1 text-xs">Bateria</span>
-                            </li>
+                                    <li className="flex flex-col items-center">
+                                        <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full focus:outline-none focus:ring-4 focus:ring-[#60F089]" type="button">
+                                            <Image width={25} height={25} src={"/images/bateria.svg"} alt="icone representativo do bateria"></Image>
+                                        </button>
+                                        <span className="mt-1 text-xs">Bateria</span>
+                                    </li>
 
-                            <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
-                                    <Image width={25} height={25} src={"/images/papelao.svg"} alt="icone representativo do bateria"></Image>
-                                </button>
-                                <span className="mt-1 text-xs">Papelão</span>
-                            </li>
-                        </ul>
+                                    <li className="flex flex-col items-center">
+                                        <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                            <Image width={25} height={25} src={"/images/papelao.svg"} alt="icone representativo do bateria"></Image>
+                                        </button>
+                                        <span className="mt-1 text-xs">Papelão</span>
+                                    </li>
+                                </ul>
 
-                        <div className="flex flex-col justify-start">
-                            <p>Rio de Janeiro - Volta Redonda</p>
-                            <p>Vila Rica, Trezentos e Quinze</p>
-                            <p>Nº 89</p>
-                        </div>
-                    </div>
+                                <div className="flex flex-col justify-start">
+                                    <p>Rio de Janeiro - Volta Redonda</p>
+                                    <p>Vila Rica, Trezentos e Quinze</p>
+                                    <p>Nº 89</p>
+                                </div>
+                            </div>
+                        </a>
+                    </Link>
 
-                    <div className="flex flex-col items-center bg-zinc-800 w-[400px] rounded-xl gap-2 pb-6 mb-8">
-                        <div className="flex flex-col gap-1">
-                            <img src="images/trash-image.png" alt="Logo Cooperativa" className="w-full h-[200px]" />
-                            <h1 className="text-2xl font-bold text-center">Recicla Tudo</h1>
-                        </div>
+                    <Link href={"/cooperativas/123123-asdsd-231"}>
+                        <a>
+                            <div className="flex flex-col items-center bg-zinc-800 w-[400px] rounded-xl gap-2 pb-6 mb-8">
+                                <div className="flex flex-col gap-1">
+                                    <img src="images/trash-image.png" alt="Logo Cooperativa" className="w-full h-[200px]" />
+                                    <h1 className="text-2xl font-bold text-center">Recicla Tudo</h1>
+                                </div>
 
-                        <ul className="flex items-center gap-4">
-                            <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
-                                    <Image width={25} height={25} src={"/images/papel.svg"} alt="icone representativo do papel"></Image>
-                                </button>
-                                <span className="mt-1 text-xs">Papel</span>
-                            </li>
+                                <ul className="flex items-center gap-4">
+                                    <li className="flex flex-col items-center">
+                                        <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                            <Image width={25} height={25} src={"/images/papel.svg"} alt="icone representativo do papel"></Image>
+                                        </button>
+                                        <span className="mt-1 text-xs">Papel</span>
+                                    </li>
 
-                            <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
-                                    <Image width={25} height={25} src={"/images/plastico.svg"} alt="icone representativo do platico"></Image>
-                                </button>
-                                <span className="mt-1 text-xs">Plástico</span>
-                            </li>
+                                    <li className="flex flex-col items-center">
+                                        <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                            <Image width={25} height={25} src={"/images/plastico.svg"} alt="icone representativo do platico"></Image>
+                                        </button>
+                                        <span className="mt-1 text-xs">Plástico</span>
+                                    </li>
 
-                            <li className="flex flex-col items-center">
-                                <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
-                                    <Image width={25} height={25} src={"/images/metal.svg"} alt="icone representativo do metal"></Image>
-                                </button>
-                                <span className="mt-1 text-xs">Metal</span>
-                            </li>
-                        </ul>
+                                    <li className="flex flex-col items-center">
+                                        <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
+                                            <Image width={25} height={25} src={"/images/metal.svg"} alt="icone representativo do metal"></Image>
+                                        </button>
+                                        <span className="mt-1 text-xs">Metal</span>
+                                    </li>
+                                </ul>
 
-                        <div className="flex flex-col justify-start">
-                            <p>Rio de Janeiro - Volta Redonda</p>
-                            <p>Vila Rica, Trezentos e Quinze</p>
-                            <p>Nº 89</p>
-                        </div>
-                    </div>
+                                <div className="flex flex-col justify-start">
+                                    <p>Rio de Janeiro - Volta Redonda</p>
+                                    <p>Vila Rica, Trezentos e Quinze</p>
+                                    <p>Nº 89</p>
+                                </div>
+                            </div>
+                        </a>
+                    </Link>
                 </div>
             </div>
         </>
