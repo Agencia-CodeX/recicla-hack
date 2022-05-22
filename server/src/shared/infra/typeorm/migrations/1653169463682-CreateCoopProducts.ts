@@ -19,7 +19,7 @@ export class CreateCoopProducts1653169463682 implements MigrationInterface {
                     },
                     {
                         name: "fk_prod_id_prod",
-                        type: "uuid",
+                        type: "numeric",
                         isPrimary: true
                     }
                 ],

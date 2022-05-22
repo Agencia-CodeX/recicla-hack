@@ -9,8 +9,12 @@ async function create() {
         .insert()
         .into(Product)
         .values([
-            { id_product: uuidv4(), name: "Plastico", description: "Material Ruim" }, 
-            { id_product: uuidv4(), name: "Papel", description: "Brabao" },
+            { id_product: 1, name: "Papel", description: "Produtos de papel" },
+            { id_product: 2, name: "Plástico", description: "Produtos de plástico" },
+            { id_product: 3, name: "Metal", description: "Produtos de metal" },
+            { id_product: 4, name: "Vidro", description: "Produtos de vidro" },
+            { id_product: 5, name: "Bateria", description: "Produtos de bateria" },
+            { id_product: 6, name: "Papelão", description: "Produtos de papelão" },
         ])
         .execute();
     

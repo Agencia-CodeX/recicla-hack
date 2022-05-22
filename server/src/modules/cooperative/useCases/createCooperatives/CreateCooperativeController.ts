@@ -41,7 +41,7 @@ class CreateCooperativeController {
             coopProducts,
             fk_coop_id_coop: coop.id_cooperative
         })
-        return response.json(coop)
+        return response.status(201).send()
     }
 }
 

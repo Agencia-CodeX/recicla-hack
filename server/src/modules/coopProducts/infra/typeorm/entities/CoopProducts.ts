@@ -10,7 +10,7 @@ class CoopProducts {
     fk_coop_id_coop: string;
 
     @PrimaryColumn()
-    fk_prod_id_prod: string;
+    fk_prod_id_prod: number;
 
     constructor() {
         if (!this.id_coopProducts) {
