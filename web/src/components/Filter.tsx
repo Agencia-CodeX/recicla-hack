@@ -15,10 +15,10 @@ export function Filter() {
 
     return (
         <>
-            <div className="flex w-[90%] mx-[5%] mt-8 h-24 bg-green-900 bg-opacity-80 rounded-lg justify-between items-center gap-6 px-6">
+            <div className=" py-4 flex w-[90%] mx-[5%] mt-8 min-h-24 bg-green-900 bg-opacity-80 rounded-lg justify-between items-center gap-6 px-6 flex-wrap ">
 
-                <div className="flex gap-6">
-                    <select name="select" className="w-[80px] h-[34px] rounded-lg px-4 text-black focus:outline-none focus:ring-4 focus:ring-[#60F089]" placeholder="Insira a UF">
+                <div className="flex gap-6 flex-wrap">
+                    <select name="select" className="w-[80px] min-h-[34px] rounded-lg px-4 text-black focus:outline-none focus:ring-4 focus:ring-[#60F089]" placeholder="Insira a UF">
                         <option value="AC">AC</option>
                         <option value="AL">AL</option>
                         <option value="AP">AP</option>
@@ -46,10 +46,10 @@ export function Filter() {
                         <option value="SE">SE</option>
                         <option value="TO">TO</option>
                     </select>
-                    <input className="w-[350px] h-[34px] rounded-lg px-5 text-black focus:outline-none focus:ring-4 focus:ring-[#60F089]" placeholder="Insira a cidade" />
+                    <input className="w-[90%] sm:w-[350px] h-[34px] rounded-lg px-5 text-black focus:outline-none focus:ring-4 focus:ring-[#60F089]" placeholder="Insira a cidade" />
                 </div>
 
-                <ul className="flex items-center gap-6">
+                <ul className="flex items-center gap-6 flex-wrap">
                     <li className="flex flex-col items-center">
                         <button
                             className={papelButton ? "w-[45px] h-[45px] flex items-center justify-center bg-green-50 rounded-full" : "w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full"}
@@ -125,10 +125,10 @@ export function Filter() {
                     <h3>3 Resultados encontrados</h3>
                 </div>
 
-                <div className="flex flex-wrap w-full gap-4 justify-between">
+                <div className="flex flex-wrap w-full gap-4 justify-center lg:justify-between">
                     <Link href={"/cooperativas/123123-asdsd-231"}>
-                        <a>
-                            <div className="flex flex-col items-center bg-zinc-800 w-[400px] rounded-xl gap-2 pb-6 mb-8">
+                        <a className="flex-1">
+                            <div className="2xl:min-w-[400px] flex flex-col items-center bg-zinc-800 rounded-xl gap-2 pb-6 mb-8">
                                 <div className="flex flex-col gap-1">
                                     <img src="images/logo.svg" alt="Logo Cooperativa" className="w-full h-[200px]" />
                                     <h1 className="text-2xl font-bold text-center">Recicla Tudo</h1>
@@ -167,14 +167,14 @@ export function Filter() {
                     </Link>
 
                     <Link href={"/cooperativas/123123-asdsd-231"}>
-                        <a>
-                            <div className="flex flex-col items-center bg-zinc-800 w-[400px] rounded-xl gap-2 pb-6 mb-8">
+                        <a className="flex-1">
+                            <div className="2xl:min-w-[400px] flex flex-col items-center bg-zinc-800 rounded-xl gap-2 pb-6 mb-8">
                                 <div className="flex flex-col gap-1">
                                     <img src="images/trash-image.png" alt="Logo Cooperativa" className="w-full h-[200px]" />
                                     <h1 className="text-2xl font-bold text-center">Recicla Tudo</h1>
                                 </div>
 
-                                <ul className="flex items-center gap-4">
+                                <ul className="flex items-center gap-3">
                                     <li className="flex flex-col items-center">
                                         <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
                                             <Image width={25} height={25} src={"/images/papel.svg"} alt="icone representativo do papel"></Image>
@@ -228,14 +228,14 @@ export function Filter() {
                     </Link>
 
                     <Link href={"/cooperativas/123123-asdsd-231"}>
-                        <a>
-                            <div className="flex flex-col items-center bg-zinc-800 w-[400px] rounded-xl gap-2 pb-6 mb-8">
+                        <a className="flex-1 lg:max-w-[590px]">
+                            <div className="2xl:-w-[400px] max-w[600px] flex flex-col items-center bg-zinc-800 rounded-xl gap-2 pb-6 mb-8">
                                 <div className="flex flex-col gap-1">
                                     <img src="images/trash-image.png" alt="Logo Cooperativa" className="w-full h-[200px]" />
                                     <h1 className="text-2xl font-bold text-center">Recicla Tudo</h1>
                                 </div>
 
-                                <ul className="flex items-center gap-4">
+                                <ul className="flex items-center gap-3">
                                     <li className="flex flex-col items-center">
                                         <button className="w-[45px] h-[45px] flex items-center justify-center bg-white rounded-full" >
                                             <Image width={25} height={25} src={"/images/papel.svg"} alt="icone representativo do papel"></Image>
