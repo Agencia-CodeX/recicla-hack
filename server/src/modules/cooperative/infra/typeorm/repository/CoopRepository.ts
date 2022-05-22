@@ -50,6 +50,10 @@ class CoopRepository implements ICoopRepository {
         return coop;
     }
 
+    listCoop(uf: string, municipio: string): Promise<Cooperative> {
+        throw new Error("Method not implemented.");
+    }
+
 }
 
 export { CoopRepository }

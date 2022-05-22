@@ -3,6 +3,8 @@ import { CoopRepository } from "../../modules/cooperative/infra/typeorm/reposito
 import { ICoopRepository } from "../../modules/cooperative/repository/ICoopRepository";
 import { CoopProductsRepository } from "../../modules/coopProducts/infra/typeorm/repository/CoopProductsRepository";
 import { ICoopProductsRepository } from "../../modules/coopProducts/repository/ICoopProductsRepository";
+import { PostRepository } from "../../modules/post/infra/typeorm/repository/PostRepository";
+import { IPostRepository } from "../../modules/post/repository/IPostRepository";
 
 
 
@@ -14,6 +16,11 @@ container.registerSingleton<ICoopRepository>(
 container.registerSingleton<ICoopProductsRepository>(
     "CoopProductsRepository",
     CoopProductsRepository
+);
+
+container.registerSingleton<IPostRepository>(
+    "PostRepository",
+    PostRepository
 );
 
 
